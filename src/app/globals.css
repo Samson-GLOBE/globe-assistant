@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
+
+:root {
+  --teal-primary: #00C9B8;
+  --teal-hover: #00B3A4;
+  --teal-light: #E6FAF8;
+  --text-dark: #1A1A2E;
+  --text-medium: #4A4A6A;
+  --text-light: #7A7A9A;
+  --badge-red: #E8453C;
+  --badge-green: #22C55E;
+  --card-bg: #FFFFFF;
+  --page-bg: #F8F9FA;
+  --border: #E5E7EB;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--page-bg);
+  color: var(--text-medium);
+  margin: 0; padding: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+}
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  max-height: 0;
+  opacity: 0;
+}
+.accordion-content.open { max-height: 9999px; opacity: 1; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: var(--teal-primary); border-radius: 3px; }
+*:focus-visible { outline: 2px solid var(--teal-primary); outline-offset: 2px; border-radius: 4px; }
