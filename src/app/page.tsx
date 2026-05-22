@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import CountryCard from '@/components/CountryCard';
+import MobilityCards from '@/components/MobilityCards';
 import mobilityData from '../../data/mobility.json';
 import type { MobilityPhase } from '@/types';
 import { Globe } from 'lucide-react';
@@ -10,7 +10,6 @@ export default function MobilityPage() {
   return (
     <>
       <section className="relative min-h-[380px] flex items-center justify-center overflow-hidden">
-        {/* Parent div carries the fallback gradient — image renders on top */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%)' }}>
           <Image
             src="/images/globe-hero-bg.jpg"
@@ -45,13 +44,9 @@ export default function MobilityPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold mb-2" style={{ fontFamily: 'Poppins,sans-serif', color: 'var(--text-dark)' }}>Your Mobility Phases</h2>
-          <p style={{ color: 'var(--text-light)' }}>Click &quot;Learn more&quot; on any card to see full details for that destination.</p>
+          <p style={{ color: 'var(--text-light)' }}>Click &quot;Explore&quot; on any card to see full details for that destination.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
-          {phases.map(phase => (
-            <div key={phase.id} id={phase.id}><CountryCard phase={phase} /></div>
-          ))}
-        </div>
+        <MobilityCards phases={phases} />
       </section>
 
       <section className="py-10" style={{ background: 'var(--text-dark)' }}>
