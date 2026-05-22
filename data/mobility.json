@@ -9,7 +9,7 @@
     "university": "Universidad Rey Juan Carlos",
     "universityShort": "URJC",
     "duration": "~5 months",
-    "image": "/images/spain-urjc.jpg",
+    "image": "/images/spain-campus.jpg",
     "color": "#E8453C",
     "accommodation": {
       "description": "URJC offers student residences across its campuses in Móstoles and Fuenlabrada. The Erasmus Student Network (ESN Madrid) runs a housing group. Budget for a shared flat is €400–700/month.",
@@ -106,7 +106,7 @@
     "university": "Bangor University",
     "universityShort": "Bangor",
     "duration": "~5 months",
-    "image": "/images/uk-bangor.jpg",
+    "image": "/images/uk-campus.jpg",
     "color": "#012169",
     "accommodation": {
       "description": "Bangor University offers on-campus halls of residence — apply immediately upon receiving your acceptance letter, as places are very competitive. Bangor town has private rental options within walking distance of campus.",
@@ -200,7 +200,7 @@
     "university": "Universidad Autónoma de Tlaxcala",
     "universityShort": "UATx",
     "duration": "~6 weeks",
-    "image": "/images/mexico-uatx.jpg",
+    "image": "/images/mexico-campus.jpg",
     "color": "#006847",
     "accommodation": {
       "description": "UATx offers limited student housing. Most GLOBE students rent private rooms in Tlaxcala city, which is very affordable. Sharing is common.",
@@ -281,7 +281,7 @@
     "university": "TBD — Partner University",
     "universityShort": "TBD",
     "duration": "~5 months",
-    "image": "/images/portugal.jpg",
+    "image": "/images/portugal-campus.jpg",
     "color": "#006600",
     "accommodation": {
       "description": "University housing should be applied for in spring before departure. Private rentals are available via Uniplaces and Idealista PT, but prices have risen significantly in Lisbon and Porto.",
