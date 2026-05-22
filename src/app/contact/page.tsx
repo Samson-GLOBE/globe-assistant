@@ -18,6 +18,7 @@ export default function ContactPage() {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
 
+          {/* Programme Coordination Column */}
           <div className="rounded-2xl overflow-hidden" style={{ background: 'var(--card-bg)', border: '1px solid var(--border)', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
             <div className="px-6 py-5 flex items-center gap-3" style={{ borderBottom: '1px solid var(--border)' }}>
               <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: 'var(--teal-light)' }}>
@@ -60,6 +61,7 @@ export default function ContactPage() {
             </div>
           </div>
 
+          {/* Disclaimer Column */}
           <div className="rounded-2xl overflow-hidden" style={{ background: 'var(--card-bg)', border: '1px solid #FDE68A', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
             <div className="px-6 py-5 flex items-center gap-3" style={{ background: '#FFFBEB', borderBottom: '1px solid #FDE68A' }}>
               <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: '#FDE68A' }}>
@@ -87,9 +89,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </div>
-            ))}
-          </div>
+
         </div>
       </section>
     </>
