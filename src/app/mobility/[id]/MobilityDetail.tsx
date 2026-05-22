@@ -11,6 +11,7 @@ export function generateStaticParams() {
 }
 
 export default function MobilityPhasePage({ params }: { params: { id: string } }) {
+  const phase = found as MobilityPhase;
   const phase = (mobilityData as MobilityPhase[]).find(p => p.id === params.id);
   if (!phase) notFound();
 
