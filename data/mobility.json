@@ -13,14 +13,22 @@
     "color": "#E8453C",
     "accommodation": {
       "description": "URJC offers student residences across its campuses in Móstoles and Fuenlabrada. The Erasmus Student Network (ESN Madrid) runs a housing group. Budget for a shared flat is €400–700/month.",
-      "budget": "€400–700/month",
-      "platforms": [
-        "Idealista",
-        "Fotocasa",
-        "ESN Madrid housing group",
-        "Badi",
-        "Spotahome"
-      ],
+      "estimated budget": "€400–700/month",
+       "platforms": [
+    {
+      "name": "Idealista",
+      "url": "https://www.idealista.com"
+    },
+    {
+      "name": "Fotocasa",
+      "url": "https://www.fotocasa.es"
+    },
+    {
+      "name": "Spotahome",
+      "url": "https://www.spotahome.com"
+    }
+  ],
+
       "tips": [
         "Apply to URJC housing in June — spots fill very quickly.",
         "Look for rooms near Móstoles or Fuenlabrada campus to save on transport.",
