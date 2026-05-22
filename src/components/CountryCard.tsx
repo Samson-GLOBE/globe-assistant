@@ -1,25 +1,23 @@
 'use client';
-import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Calendar, ArrowRight } from 'lucide-react';
 import type { MobilityPhase } from '@/types';
 
-export default function CountryCard({ phase }: { phase: MobilityPhase }) {
+export default function CountryCard({ phase, onExplore }: { phase: MobilityPhase; onExplore: () => void }) {
   return (
     <article className="rounded-2xl overflow-hidden flex flex-col"
       style={{ background: 'var(--card-bg)', border: '1px solid var(--border)', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
 
-      {/* Image header — taller so full photo is visible */}
-      <div className="relative h-64 w-full" style={{ background: `linear-gradient(135deg,${phase.color}33,${phase.color}66)` }}>
+      {/* Image header — h-64 for a taller, fully visible photo */}
+      <div className="relative h-64 w-full"
+        style={{ background: `linear-gradient(135deg,${phase.color}33,${phase.color}66)` }}>
         <Image
           src={phase.image}
           alt={`${phase.university} — ${phase.city}`}
           fill
           className="object-cover object-center"
           sizes="(max-width:768px) 100vw, 50vw"
-          onError={e => {
-            (e.target as HTMLImageElement).style.display = 'none';
-          }}
+          onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute top-3 right-3 w-10 h-10 rounded-full bg-white flex items-center justify-center text-xs font-bold shadow"
@@ -54,12 +52,12 @@ export default function CountryCard({ phase }: { phase: MobilityPhase }) {
           <span>{phase.phase} · {phase.duration}</span>
         </div>
 
-        <Link
-          href={`/mobility/${phase.id}`}
+        <button
+          onClick={onExplore}
           className="mt-auto flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl border-2 text-sm font-semibold transition-all hover:bg-[#E6FAF8]"
           style={{ borderColor: 'var(--teal-primary)', color: 'var(--teal-primary)' }}>
           Explore {phase.country} <ArrowRight size={16} />
-        </Link>
+        </button>
       </div>
     </article>
   );
