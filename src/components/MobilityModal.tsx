@@ -209,7 +209,7 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
         className="relative flex flex-col h-full overflow-hidden"
         style={{
           width: 'min(620px, 100vw)',
-          background: 'var(--bg-light)',
+          background: '#ffffff',
           boxShadow: '-4px 0 32px rgba(0,0,0,0.2)',
           animation: 'slideInRight 0.25s ease-out',
         }}
@@ -250,7 +250,7 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
         </div>
 
         {/* Info strip */}
-        <div className="flex flex-wrap gap-4 px-5 py-4 shrink-0 border-b" style={{ borderColor: 'var(--border)' }}>
+        <div className="flex flex-wrap gap-4 px-5 py-4 shrink-0 border-b" style={{ borderColor: 'var(--border)', background: '#ffffff' }}>
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: 'var(--text-light)' }}>University</p>
             <p className="text-sm font-semibold" style={{ color: 'var(--text-dark)' }}>
@@ -272,7 +272,7 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
         </div>
 
         {/* Tab bar */}
-        <div className="flex overflow-x-auto gap-1.5 px-5 py-3 shrink-0 border-b" style={{ borderColor: 'var(--border)', scrollbarWidth: 'none' }}>
+        <div className="flex overflow-x-auto gap-1.5 px-5 py-3 shrink-0 border-b" style={{ borderColor: 'var(--border)', scrollbarWidth: 'none', background: '#ffffff' }}>
           {TABS.map(t => (
             <button
               key={t.key}
@@ -287,7 +287,7 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
         </div>
 
         {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto p-5">
+        <div className="flex-1 overflow-y-auto p-5" style={{ background: '#f8f9fa' }}>
           {tabContent[tab]}
 
           {/* Additional notes at bottom of contacts tab or always */}
