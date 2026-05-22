@@ -28,7 +28,7 @@ export default function ContactPage() {
             </div>
             <div className="px-6 py-5">
               <p className="text-sm mb-5" style={{ color: 'var(--text-medium)', lineHeight: '1.7' }}>
-                For general questions about the GLOBE Erasmus Mundus programme, applications, grants, and schedules, contact the programme coordination team.
+                For general questions about the GLOBE Erasmus Mundus programme, applications, and schedules, contact the programme coordination team.
               </p>
               <div className="space-y-4">
                 <div className="p-4 rounded-xl" style={{ background: 'var(--teal-light)', border: '1px solid rgba(0,201,184,0.2)' }}>
@@ -39,7 +39,7 @@ export default function ContactPage() {
                     <div>
                       <p className="text-xs font-bold uppercase tracking-wider mb-0.5" style={{ color: 'var(--teal-primary)' }}>Programme Coordinator</p>
                       <p className="text-sm font-semibold mb-0.5" style={{ color: 'var(--text-dark)' }}>GLOBE Coordination Office</p>
-                      <a href="mailto:info@globe-master.eu" className="text-sm font-medium hover:underline" style={{ color: 'var(--teal-primary)' }}>info@globe-master.eu</a>
+                      <a href="mailto:project.globe@urjc.es" className="text-sm font-medium hover:underline" style={{ color: 'var(--teal-primary)' }}>project.globe@urjc.es</a>
                       <p className="text-xs mt-1" style={{ color: 'var(--text-light)' }}>General enquiries & applications</p>
                     </div>
                   </div>
@@ -49,12 +49,7 @@ export default function ContactPage() {
                     <div className="w-9 h-9 rounded-full flex items-center justify-center shrink-0" style={{ background: 'var(--text-dark)' }}>
                       <Mail size={16} className="text-white" />
                     </div>
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-wider mb-0.5" style={{ color: 'var(--text-light)' }}>Student Mobility Officer</p>
-                      <p className="text-sm font-semibold mb-0.5" style={{ color: 'var(--text-dark)' }}>International Relations Office</p>
-                      <a href="mailto:mobility@globe-master.eu" className="text-sm font-medium hover:underline" style={{ color: 'var(--teal-primary)' }}>mobility@globe-master.eu</a>
-                      <p className="text-xs mt-1" style={{ color: 'var(--text-light)' }}>Mobility placements & grant support</p>
-                    </div>
+                
                   </div>
                 </div>
               </div>
