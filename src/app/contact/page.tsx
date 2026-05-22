@@ -69,7 +69,7 @@ export default function ContactPage() {
             </div>
             <div className="px-6 py-5 space-y-4">
               <p className="text-sm leading-relaxed" style={{ color: 'var(--text-medium)' }}>
-                All visa information is sourced from <strong style={{ color: 'var(--text-dark)' }}>official government and embassy websites</strong> at the time of publication. However, <strong style={{ color: 'var(--text-dark)' }}>immigration rules are subject to change</strong> without prior notice.
+                This is an alumni-led resource, not an official GLOBE website. All visa information is sourced from <strong style={{ color: 'var(--text-dark)' }}>official government and embassy websites</strong> at the time of publication. However, <strong style={{ color: 'var(--text-dark)' }}>immigration rules are subject to change</strong> without prior notice.
               </p>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--text-medium)' }}>
                 It is the sole responsibility of each student to verify current requirements directly with the relevant embassy <strong style={{ color: 'var(--text-dark)' }}>before</strong> making any travel or application arrangements. The GLOBE programme <strong style={{ color: 'var(--text-dark)' }}>does not accept liability</strong> for any inaccuracies or consequences arising from reliance on this information.
@@ -88,22 +88,6 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-
-        <div className="mt-8 rounded-2xl p-6" style={{ background: 'var(--card-bg)', border: '1px solid var(--border)' }}>
-          <h2 className="text-lg font-bold mb-4" style={{ fontFamily: 'Poppins,sans-serif', color: 'var(--text-dark)' }}>Partner University Contacts</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { flag: '🇪🇸', name: 'URJC', city: 'Madrid, Spain', email: 'erasmus.incoming@urjc.es' },
-              { flag: '🇬🇧', name: 'Bangor University', city: 'Bangor, Wales', email: 'international@bangor.ac.uk' },
-              { flag: '🇲🇽', name: 'UATx', city: 'Tlaxcala, Mexico', email: 'relaciones.internacionales@uatx.mx' },
-              { flag: '🇵🇹', name: 'TBD', city: 'Portugal', email: 'info@globe-master.eu' },
-            ].map(({ flag, name, city, email }) => (
-              <div key={name} className="p-4 rounded-xl" style={{ background: 'var(--teal-light)', border: '1px solid rgba(0,201,184,0.15)' }}>
-                <p className="text-xl mb-1">{flag}</p>
-                <p className="text-sm font-semibold mb-0.5" style={{ color: 'var(--text-dark)' }}>{name}</p>
-                <p className="text-xs mb-2" style={{ color: 'var(--text-light)' }}>{city}</p>
-                <a href={`mailto:${email}`} className="text-xs font-medium hover:underline" style={{ color: 'var(--teal-primary)' }}>{email}</a>
-              </div>
             ))}
           </div>
         </div>
