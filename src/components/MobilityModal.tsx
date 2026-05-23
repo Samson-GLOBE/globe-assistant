@@ -295,8 +295,16 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
           <div className="absolute bottom-4 left-4">
             <span className="inline-block mb-2 px-2.5 py-0.5 rounded-full text-xs font-semibold text-white"
               style={{ background: 'rgba(0,201,184,0.85)' }}>{phase.phase}</span>
-            <div className="flex items-center gap-2">
-              <span className="text-3xl">{phase.flag}</span>
+            <div className="flex items-center gap-3">
+              {/* Real flag image — renders correctly on all platforms */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`https://flagcdn.com/w80/${phase.countryCode.toLowerCase()}.png`}
+                alt={phase.country}
+                width={44}
+                height={30}
+                style={{ borderRadius: 4, objectFit: 'cover', boxShadow: '0 1px 4px rgba(0,0,0,0.4)' }}
+              />
               <h2 className="text-2xl font-bold text-white" style={{ fontFamily: 'Poppins,sans-serif' }}>
                 {phase.country}
               </h2>
