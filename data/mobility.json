@@ -9,7 +9,7 @@
     "university": "Universidad Rey Juan Carlos",
     "universityShort": "URJC",
     "duration": "First Semester",
-    "image": "/images/spain-campus.jpg",
+    "image": "/images/spain-campus.JPG",
     "color": "#E8453C",
     "tabs": ["accommodation", "transport", "permit", "banking"],
     "accommodation": {
@@ -37,8 +37,7 @@
         "Under 25? Abono Joven costs €10/month for unlimited Metro, Bus & Cercanías across Madrid.",
         "Age 26 or older? Standard Abono Transporte covers the full Madrid Community for €49/month.",
         "Bring your passport and €4 cash to your appointment for the card issuance fee.",
-        "Download the METRO MADRID and CERCANÍAS apps for real-time maps and timetables.",
-        "Taxi apps: Cabify and FREE NOW are safer than flagging street taxis."
+        "Download the METRO MADRID and CERCANÍAS apps for real-time maps and timetables."
       ]
     },
     "simCards": { "providers": [], "recommended": "", "tips": [] },
@@ -74,7 +73,7 @@
     "university": "Bangor University",
     "universityShort": "Bangor",
     "duration": "Second Semester — Bangor University",
-    "image": "/images/uk-campus.jpg",
+    "image": "/images/uk-campus.JPG",
     "color": "#012169",
     "tabs": ["accommodation"],
     "accommodation": {
@@ -105,7 +104,7 @@
     "city": "Tlaxcala",
     "university": "Universidad Autónoma de Tlaxcala",
     "universityShort": "UATx",
-    "duration": "Third Semester — Summer School, University of Tlaxcala",
+    "duration": "Summer School, University of Tlaxcala",
     "image": "/images/mexico-campus.jpg",
     "color": "#006847",
     "tabs": ["accommodation"],
@@ -130,10 +129,10 @@
     "countryCode": "PT",
     "flag": "🇵🇹",
     "city": "Lisbon",
-    "university": "Universidade de Lisboa",
+    "university": "Universidad de Lisboa",
     "universityShort": "ULisboa",
-    "duration": "Third Semester — Universidade de Lisboa",
-    "image": "/images/portugal-campus.jpg",
+    "duration": "Third Semester — Universidad de Lisboa",
+    "image": "/images/portugal-campus.JPG",
     "color": "#006600",
     "tabs": ["accommodation"],
     "accommodation": {
