@@ -9,7 +9,7 @@
     "university": "Universidad Rey Juan Carlos",
     "universityShort": "URJC",
     "duration": "~5 months",
-    "image": "/images/spain-campus.jpg",
+    "image": "/images/spain-campus.JPG",
     "color": "#E8453C",
     "accommodation": {
       "description": "URJC offers student residences across its campuses in Móstoles and Fuenlabrada. The Erasmus Student Network (ESN Madrid) runs a housing group. Budget for a shared flat is €400–700/month.",
@@ -106,7 +106,7 @@
     "university": "Bangor University",
     "universityShort": "Bangor",
     "duration": "~5 months",
-    "image": "/images/uk-campus.jpg",
+    "image": "/images/uk-campus.JPG",
     "color": "#012169",
     "accommodation": {
       "description": "Bangor University offers on-campus halls of residence — apply immediately upon receiving your acceptance letter, as places are very competitive. Bangor town has private rental options within walking distance of campus.",
@@ -277,11 +277,10 @@
     "country": "Portugal",
     "countryCode": "PT",
     "flag": "🇵🇹",
-    "city": "TBD",
-    "university": "TBD — Partner University",
-    "universityShort": "TBD",
-    "duration": "~5 months",
-    "image": "/images/portugal-campus.jpg",
+    "city": "Lisboa",
+    "university": "Universidad de Lisboa",
+    "universityShort": "ULisboa",
+    "image": "/images/portugal-campus.JPG",
     "color": "#006600",
     "accommodation": {
       "description": "University housing should be applied for in spring before departure. Private rentals are available via Uniplaces and Idealista PT, but prices have risen significantly in Lisbon and Porto.",
