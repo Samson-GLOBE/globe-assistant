@@ -29,16 +29,13 @@
       "description": "Madrid has one of Europe's best metro networks. Campuses in Móstoles and Fuenlabrada are served by Cercanías commuter trains from Atocha station.",
       "options": [
         "Metro Madrid — 10-journey card (Metrobús) ~€12.20",
-        "EMT city buses — same Metrobús card valid",
         "Cercanías (commuter train) — Zones A–B for campus",
         "Renfe long-distance trains — for weekend travel around Spain",
-        "Lime/Bolt scooters — available in central Madrid"
       ],
       "tips": [
-        "Get an Abono Joven (under 26): unlimited Metro+Bus+Cercanías for €20/month.",
+        "Get an Abono Joven (under 26): unlimited Metro+Bus+Cercanías for €10/month.",
         "Top up your transport card at any metro station machine.",
         "Download the METRO MADRID and CERCANÍAS apps for real-time maps.",
-        "Taxi apps: Cabify and FREE NOW are safer than street taxis."
       ]
     },
     "simCards": { "providers": [], "recommended": "", "tips": [] },
@@ -105,7 +102,7 @@
     "city": "Tlaxcala",
     "university": "Universidad Autónoma de Tlaxcala",
     "universityShort": "UATx",
-    "duration": "Third Semester — Summer School, University of Tlaxcala",
+    "duration": "Summer School, University of Tlaxcala",
     "image": "/images/mexico-campus.jpg",
     "color": "#006847",
     "tabs": ["accommodation"],
@@ -130,9 +127,9 @@
     "countryCode": "PT",
     "flag": "🇵🇹",
     "city": "Lisbon",
-    "university": "Universidade de Lisboa",
+    "university": "Universidad de Lisboa",
     "universityShort": "ULisboa",
-    "duration": "Third Semester — Universidade de Lisboa",
+    "duration": "Third Semester — Universidad de Lisboa",
     "image": "/images/portugal-campus.JPG",
     "color": "#006600",
     "tabs": ["accommodation"],
