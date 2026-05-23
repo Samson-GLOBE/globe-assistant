@@ -1,0 +1,362 @@
+[
+  {
+    "id": "spain",
+    "phase": "Semester 1",
+    "country": "Spain",
+    "countryCode": "ES",
+    "flag": "🇪🇸",
+    "city": "Madrid",
+    "university": "Universidad Rey Juan Carlos",
+    "universityShort": "URJC",
+    "duration": "First Semester",
+    "image": "/images/spain-campus.jpg",
+    "color": "#E8453C",
+    "accommodation": {
+      "description": "URJC offers student residences across its campuses in Móstoles and Fuenlabrada. The Erasmus Student Network (ESN Madrid) runs a housing group. Budget for a shared flat is €400–700/month.",
+      "budget": "€400–700/month",
+      "platforms": [
+        "Idealista",
+        "Fotocasa",
+        "ESN Madrid housing group",
+        "Badi",
+        "Spotahome"
+      ],
+      "tips": [
+        "Apply to URJC housing in June — spots fill very quickly.",
+        "Look for rooms near Móstoles or Fuenlabrada campus to save on transport.",
+        "Many landlords require a guarantor (aval) — ask URJC international office for alternatives.",
+        "Join the GLOBE & Erasmus WhatsApp groups; students often share flats.",
+        "Ask for a rental contract (contrato de arrendamiento) — you will need it for your TIE application."
+      ]
+    },
+    "transport": {
+      "description": "Madrid has one of Europe's best metro networks. Campuses in Móstoles and Fuenlabrada are served by Cercanías commuter trains from Atocha station.",
+      "options": [
+        "Metro Madrid — 10-journey card (Metrobús) ~€12.20",
+        "EMT city buses — same Metrobús card valid",
+        "Cercanías (commuter train) — Zones A–B for campus",
+        "Renfe long-distance trains — for weekend travel around Spain",
+        "Lime/Bolt scooters — available in central Madrid"
+      ],
+      "tips": [
+        "Get an Abono Joven (under 26): unlimited Metro+Bus+Cercanías for €20/month.",
+        "Top up your transport card at any metro station machine.",
+        "Download the METRO MADRID and CERCANÍAS apps for real-time maps.",
+        "Taxi apps: Cabify and FREE NOW are safer than street taxis."
+      ]
+    },
+    "simCards": {
+      "providers": [
+        "Digi Mobile",
+        "Lebara",
+        "Orange",
+        "Vodafone",
+        "Yoigo",
+        "Movistar"
+      ],
+      "recommended": "Digi Mobile — 50GB for ~€7/month (best value for students)",
+      "tips": [
+        "You need your NIE number to sign a phone contract. Use a prepaid SIM until you have your NIE.",
+        "Digi and Lebara are the best budget options.",
+        "Make sure your phone is unlocked before arriving."
+      ]
+    },
+    "residencePermit": {
+      "required": true,
+      "name": "TIE — Tarjeta de Identidad de Extranjero",
+      "timeline": "Apply within 30 days of arrival at the Oficina de Extranjería",
+      "documents": [
+        "Valid passport + photocopy of all pages",
+        "Long-stay (Type D) student visa",
+        "3 recent passport-size photos (35×45mm, white background)",
+        "University enrollment certificate (Carta de Admisión from URJC)",
+        "Proof of accommodation (rental contract or residence letter)",
+        "Proof of health insurance",
+        "Proof of financial means (Erasmus grant letter or bank statements)",
+        "Completed EX-17 application form",
+        "Appointment at extranjeria.gob.es (cita previa)"
+      ],
+      "notes": "EU citizens: register at the Registro Central de Extranjeros instead (much simpler). Non-EU students must arrive on a long-stay visa obtained from the Spanish embassy BEFORE travelling."
+    },
+    "healthInsurance": "EU citizens: bring your European Health Insurance Card (EHIC/CEAM). Non-EU students: private insurance is mandatory. Recommended: Mapfre Estudiantes (~€40/month), Adeslas, Sanitas. Policy must cover €30,000+ and repatriation.",
+    "banking": "Revolut, N26, or Wise work perfectly for receiving Erasmus grants (SEPA transfers). If you want a Spanish account: Openbank (Santander's online bank, no fees) is easiest. Avoid traditional banks with maintenance fees.",
+    "keyContacts": [
+      {
+        "label": "International Office",
+        "email": "international@urjc.es"
+      },
+      {
+        "label": "Erasmus Incoming",
+        "email": "erasmus.incoming@urjc.es"
+      }
+    ],
+    "additionalNotes": [
+      "The Erasmus grant is paid monthly to your European bank account. Confirm details with URJC before arrival.",
+      "URJC has campuses in Móstoles, Fuenlabrada, Alcorcón, and Vicálvaro — confirm which campus your courses are on.",
+      "Emergency number in Spain: 112."
+    ]
+  },
+  {
+    "id": "uk",
+    "phase": "Semester 2",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "flag": "🇬🇧",
+    "city": "Bangor, Wales",
+    "university": "Bangor University",
+    "universityShort": "Bangor",
+    "duration": "Second Semester — Bangor University",
+    "image": "/images/uk-campus.jpg",
+    "color": "#012169",
+    "accommodation": {
+      "description": "Bangor University offers on-campus halls of residence — apply immediately upon receiving your acceptance letter, as places are very competitive. Bangor town has private rental options within walking distance of campus.",
+      "budget": "£600–900/month (including utilities for halls)",
+      "platforms": [
+        "Bangor University Accommodation Portal",
+        "SpareRoom",
+        "Rightmove",
+        "Zoopla",
+        "Facebook Marketplace Bangor"
+      ],
+      "tips": [
+        "Apply for university halls the same day you receive your acceptance.",
+        "Bangor is a small, walkable city — living near the high street means easy access to campus.",
+        "Private rentals often require a UK guarantor — international students may need to pay several months upfront.",
+        "Check if your halls include utilities (gas, electricity, internet) in the price."
+      ]
+    },
+    "transport": {
+      "description": "Bangor is small and walkable. For wider travel, bus and train services connect to the rest of Wales and the UK.",
+      "options": [
+        "Walking/cycling — most of Bangor accessible on foot",
+        "Sherpa'r Wyddfa buses — local Gwynedd bus network",
+        "Arriva Trains Wales — Bangor station on the North Wales mainline",
+        "National Rail — discounted with 16-25 Railcard (£30/year, saves 1/3)",
+        "FlixBus / National Express — budget coaches to Manchester, London"
+      ],
+      "tips": [
+        "Buy a 16-25 Railcard immediately — it pays for itself in one trip.",
+        "Cardiff is ~3.5 hours by train; Liverpool and Manchester ~1.5 hours.",
+        "Snowdonia National Park is on Bangor's doorstep — hire bikes for weekends."
+      ]
+    },
+    "simCards": {
+      "providers": [
+        "Three UK",
+        "GiffGaff",
+        "Smarty",
+        "Sky Mobile",
+        "iD Mobile"
+      ],
+      "recommended": "Three UK — includes free data roaming in 71 countries including all EU states",
+      "tips": [
+        "All SIM providers require only a passport — no local address needed.",
+        "GiffGaff: no contract, pay monthly, good EU roaming.",
+        "Smarty (owned by Three) has the cheapest plans — from £5/month."
+      ]
+    },
+    "residencePermit": {
+      "required": true,
+      "name": "Student Visa (UK) + BRP (Biometric Residence Permit)",
+      "timeline": "Apply for Student Visa 6–8 weeks before travel. Collect BRP within 10 days of arrival.",
+      "documents": [
+        "Valid passport (6+ months beyond course end)",
+        "CAS (Confirmation of Acceptance for Studies) from Bangor University",
+        "Online UK visa application at gov.uk",
+        "Biometric enrolment at UK Visa Application Centre",
+        "Bank statements showing sufficient funds",
+        "Proof of English language proficiency",
+        "TB test certificate if from a listed country",
+        "Immigration Health Surcharge (IHS) — £776/year",
+        "Visa fee: £490"
+      ],
+      "notes": "Post-Brexit, EU/EEA citizens need a UK Student Visa like all other international students for courses over 6 months. For courses of 6 months or under, a Standard Visitor Visa (£115) may suffice — confirm with Bangor University."
+    },
+    "healthInsurance": "Students who pay the IHS surcharge with their visa get full NHS access. Register with a GP in Bangor immediately after arrival. NHS is free at point of use once registered.",
+    "banking": "Monzo or Starling are easiest — open online, no UK address needed initially. HSBC has an international student account you can open before travelling. Use Revolut or Wise for daily spending to avoid foreign transaction fees.",
+    "keyContacts": [
+      {
+        "label": "International Office",
+        "email": "international@bangor.ac.uk"
+      },
+      {
+        "label": "Admissions",
+        "email": "admissions@bangor.ac.uk"
+      }
+    ],
+    "additionalNotes": [
+      "The UK uses £GBP — not Euros. £1 ≈ €1.17 (check current rate).",
+      "Wales has its own language (Welsh/Cymraeg) — signs are bilingual.",
+      "Emergency number in the UK: 999. Non-emergency police: 101."
+    ]
+  },
+  {
+    "id": "mexico",
+    "phase": "Summer School",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "flag": "🇲🇽",
+    "city": "Tlaxcala",
+    "university": "Universidad Autónoma de Tlaxcala",
+    "universityShort": "UATx",
+    "duration": "Third Semester — Summer School, University of Tlaxcala",
+    "image": "/images/mexico-campus.jpg",
+    "color": "#006847",
+    "accommodation": {
+      "description": "UATx offers limited student housing. Most GLOBE students rent private rooms in Tlaxcala city, which is very affordable. Sharing is common.",
+      "budget": "MXN 2,000–4,000/month (~€100–200)",
+      "platforms": [
+        "UATx housing coordinator",
+        "Facebook Marketplace Tlaxcala",
+        "OLX México",
+        "Airbnb (short-term)"
+      ],
+      "tips": [
+        "Contact UATx international relations well in advance — they often coordinate shared housing.",
+        "Tlaxcala city centre is safe and walkable.",
+        "Airbnb is a good option for the first week while you find permanent accommodation."
+      ]
+    },
+    "transport": {
+      "description": "Tlaxcala uses a combi (minibus) network that covers the city cheaply. Buses connect regularly to Puebla and Mexico City.",
+      "options": [
+        "Combi (minibus) — within Tlaxcala, typically MXN 7–10",
+        "Buses to Puebla — ~45 min, MXN 20–30",
+        "CAPU terminal (Puebla) — connections to Mexico City",
+        "Uber and InDriver — available in Tlaxcala city"
+      ],
+      "tips": [
+        "Always use Uber or InDriver rather than flagging taxis — safer and transparent pricing.",
+        "Mexico City is ~2 hours from Tlaxcala by direct bus — great for weekends.",
+        "Download the InDriver app — often cheaper than Uber in smaller cities."
+      ]
+    },
+    "simCards": {
+      "providers": [
+        "Telcel",
+        "AT&T México",
+        "Movistar México"
+      ],
+      "recommended": "Telcel — best nationwide coverage, essential for travel outside Tlaxcala",
+      "tips": [
+        "Buy a Telcel SIM at any OXXO store — just bring your passport.",
+        "Telcel plans: ~MXN 200/month for 4GB + unlimited WhatsApp.",
+        "Signal in Tlaxcala city is excellent."
+      ]
+    },
+    "residencePermit": {
+      "required": false,
+      "name": "FMM Tourist Entry Card (Forma Migratoria Múltiple)",
+      "timeline": "Issued on arrival at Mexican port of entry — valid up to 180 days",
+      "documents": [
+        "Valid passport",
+        "FMM form (available on the plane or at the border)",
+        "Return/onward flight ticket",
+        "UATx invitation/enrollment letter (recommended)"
+      ],
+      "notes": "The 6-week summer school is well within Mexico's 180-day tourist entry allowance. Keep your FMM card safe — you must surrender it when you exit Mexico. Check your nationality in the Visa Checker as some nationalities require a visitor visa."
+    },
+    "healthInsurance": "Travel health insurance is strongly recommended covering medical evacuation. Consider WorldNomads or AXA Travel for the summer school period.",
+    "banking": "Notify your home bank of travel to Mexico to avoid your card being blocked. Wise and Revolut cards work well. Withdraw cash from major ATMs: BBVA, Banamex, HSBC México. Small vendors may only accept cash (MXN).",
+    "keyContacts": [
+      {
+        "label": "International Relations",
+        "email": "relaciones.internacionales@uatx.mx"
+      }
+    ],
+    "additionalNotes": [
+      "Tlaxcala is consistently ranked one of Mexico's safest states.",
+      "Register with your home country's embassy upon arrival.",
+      "Water: drink only bottled or filtered water.",
+      "Emergency number in Mexico: 911."
+    ]
+  },
+  {
+    "id": "portugal",
+    "phase": "Semester 4",
+    "country": "Portugal",
+    "countryCode": "PT",
+    "flag": "🇵🇹",
+    "city": "TBD",
+    "university": "TBD — Partner University",
+    "universityShort": "TBD",
+    "duration": "Third Semester — Universidade de Lisboa",
+    "image": "/images/portugal-campus.jpg",
+    "color": "#006600",
+    "accommodation": {
+      "description": "University housing should be applied for in spring before departure. Private rentals are available via Uniplaces and Idealista PT, but prices have risen significantly in Lisbon and Porto.",
+      "budget": "€500–800/month (Lisbon/Porto higher)",
+      "platforms": [
+        "Uniplaces",
+        "Idealista PT",
+        "OLX Portugal",
+        "Imovirtual",
+        "University housing portal"
+      ],
+      "tips": [
+        "Apply for university housing in spring (April/May) — places are limited.",
+        "Lisbon and Porto are expensive — consider suburbs with metro/train access.",
+        "Always get a written rental contract — you will need it for your NIF and AR application."
+      ]
+    },
+    "transport": {
+      "description": "Portugal has good public transport in urban areas. Lisbon has an excellent metro; Porto has the Metro do Porto light rail.",
+      "options": [
+        "Metro Lisboa / Metro do Porto — student monthly pass available",
+        "STCP buses (Porto) and Carris buses (Lisbon)",
+        "CP trains — intercity rail across Portugal",
+        "Flixbus — budget coaches between cities"
+      ],
+      "tips": [
+        "Get a Viva Viagem card (Lisbon) or Andante card (Porto).",
+        "Apply for a Cartão Jovem (18–30 youth card, ~€6) for rail discounts.",
+        "Uber and Bolt work well in all major Portuguese cities."
+      ]
+    },
+    "simCards": {
+      "providers": [
+        "MEO",
+        "NOS",
+        "Vodafone PT",
+        "NOWO"
+      ],
+      "recommended": "MEO — best rural and nationwide coverage",
+      "tips": [
+        "MEO and NOS both offer good student plans ~€15/month for 20GB+.",
+        "You do not need a NIF to buy a prepaid SIM.",
+        "Portugal has strong 4G coverage; 5G in major cities."
+      ]
+    },
+    "residencePermit": {
+      "required": true,
+      "name": "Autorização de Residência para Estudo (AR) — preceded by Type D Study Visa",
+      "timeline": "Obtain Type D visa before departure; register with AIMA within 4 months of arrival",
+      "documents": [
+        "Valid passport",
+        "Type D Study Visa (from Portuguese embassy — non-EU only)",
+        "University enrollment certificate",
+        "Proof of accommodation (rental contract)",
+        "Proof of financial means",
+        "Health insurance valid in Portugal",
+        "Criminal record certificate (apostilled) — non-EU",
+        "NIF (Portuguese tax number — get in first week)",
+        "AIMA appointment at aima.gov.pt"
+      ],
+      "notes": "EU citizens: No visa needed. Register at the Câmara Municipal within 90 days. Non-EU: Apply for Type D Study Visa before travelling. After arrival, register with AIMA within 4 months. Get your NIF first — required for renting and banking."
+    },
+    "healthInsurance": "EU citizens: EHIC/CEAM card gives access to public healthcare (SNS). Register with a local Centro de Saúde. Non-EU students: private health insurance required for visa.",
+    "banking": "Get your NIF first — required to open any bank account in Portugal. Banking options: Millennium BCP, Caixa Geral, ActivoBank (no-fee). MB WAY is Portugal's universal mobile payment system.",
+    "keyContacts": [
+      {
+        "label": "Programme Coordinator (update pending)",
+        "email": "info@globe-master.eu"
+      }
+    ],
+    "additionalNotes": [
+      "Partner university and city for Semester 4 will be confirmed by the coordination office.",
+      "The NIF (Número de Identificação Fiscal) is your Portuguese tax number — get it in your first week.",
+      "Portugal is part of the Schengen Area.",
+      "Emergency number in Portugal: 112."
+    ]
+  }
+]
