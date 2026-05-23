@@ -4,13 +4,11 @@ import type { ReactNode } from 'react';
 import Image from 'next/image';
 import {
   X, MapPin, Calendar, Home, Train, Smartphone,
-  FileText, Heart, CreditCard, Mail, Info, CheckCircle, XCircle
+  FileText, Heart, CreditCard, Mail, Info, CheckCircle, XCircle, ExternalLink
 } from 'lucide-react';
-import type { MobilityPhase } from '@/types';
+import type { MobilityPhase, MobilityTab, PlatformLink } from '@/types';
 
-type Tab = 'accommodation' | 'transport' | 'sim' | 'permit' | 'insurance' | 'banking' | 'contacts';
-
-const TABS: { key: Tab; label: string; icon: ReactNode }[] = [
+const ALL_TABS: { key: MobilityTab; label: string; icon: ReactNode }[] = [
   { key: 'accommodation', label: 'Housing',   icon: <Home size={14} /> },
   { key: 'transport',     label: 'Transport', icon: <Train size={14} /> },
   { key: 'sim',           label: 'SIM Cards', icon: <Smartphone size={14} /> },
@@ -28,13 +26,32 @@ function Tip({ text }: { text: string }) {
   );
 }
 
-function Pills({ items }: { items: string[] }) {
+function Platforms({ items }: { items: PlatformLink[] }) {
+  if (!items.length) return null;
   return (
     <div className="flex flex-wrap gap-2">
-      {items.map(i => (
-        <span key={i} className="px-2.5 py-1 rounded-full text-xs"
-          style={{ background: '#F3F4F6', color: 'var(--text-medium)' }}>{i}</span>
-      ))}
+      {items.map(item =>
+        item.url ? (
+          <a
+            key={item.name}
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium transition-opacity hover:opacity-80"
+            style={{ background: 'var(--teal-light)', color: 'var(--teal-primary)' }}
+          >
+            {item.name} <ExternalLink size={10} />
+          </a>
+        ) : (
+          <span
+            key={item.name}
+            className="px-2.5 py-1 rounded-full text-xs"
+            style={{ background: '#F3F4F6', color: 'var(--text-medium)' }}
+          >
+            {item.name}
+          </span>
+        )
+      )}
     </div>
   );
 }
@@ -49,7 +66,12 @@ function Block({ title, children }: { title: string; children: ReactNode }) {
 }
 
 export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase; onClose: () => void }) {
-  const [tab, setTab] = useState<Tab>('accommodation');
+  // Determine which tabs to show for this country
+  const TABS = phase.tabs
+    ? ALL_TABS.filter(t => phase.tabs!.includes(t.key))
+    : ALL_TABS;
+
+  const [tab, setTab] = useState<MobilityTab>(TABS[0]?.key ?? 'accommodation');
 
   // Lock body scroll while modal is open
   useEffect(() => {
@@ -64,15 +86,16 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
     return () => window.removeEventListener('keydown', handler);
   }, [onClose]);
 
-  const tabContent: Record<Tab, ReactNode> = {
+  const tabContent: Partial<Record<MobilityTab, ReactNode>> = {
     accommodation: (
       <div className="space-y-5">
-        <p className="text-sm leading-relaxed" style={{ color: 'var(--text-medium)' }}>
-          {phase.accommodation.description}
-        </p>
+        {phase.accommodation.description && (
+          <p className="text-sm leading-relaxed font-medium" style={{ color: 'var(--text-dark)' }}>
+            {phase.accommodation.description}
+          </p>
+        )}
         {phase.accommodation.budget && (
           <div className="flex items-center gap-2">
-            <span className="text-sm font-semibold" style={{ color: 'var(--text-dark)' }}>Budget:</span>
             <span className="px-3 py-1 rounded-full text-sm font-semibold"
               style={{ background: 'var(--teal-light)', color: 'var(--teal-primary)' }}>
               {phase.accommodation.budget}
@@ -80,20 +103,27 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
           </div>
         )}
         {phase.accommodation.platforms.length > 0 && (
-          <Block title="Platforms"><Pills items={phase.accommodation.platforms} /></Block>
+          <Block title="Where to look">
+            <Platforms items={phase.accommodation.platforms} />
+          </Block>
         )}
         {phase.accommodation.tips.length > 0 && (
           <Block title="Tips">
-            <ul className="space-y-2">{phase.accommodation.tips.map(t => <Tip key={t} text={t} />)}</ul>
+            <ul className="space-y-2">
+              {phase.accommodation.tips.map(t => <Tip key={t} text={t} />)}
+            </ul>
           </Block>
         )}
       </div>
     ),
+
     transport: (
       <div className="space-y-5">
-        <p className="text-sm leading-relaxed" style={{ color: 'var(--text-medium)' }}>
-          {phase.transport.description}
-        </p>
+        {phase.transport.description && (
+          <p className="text-sm leading-relaxed" style={{ color: 'var(--text-medium)' }}>
+            {phase.transport.description}
+          </p>
+        )}
         {phase.transport.options.length > 0 && (
           <Block title="Options">
             <ul className="space-y-2">
@@ -112,6 +142,7 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
         )}
       </div>
     ),
+
     sim: (
       <div className="space-y-5">
         {phase.simCards.recommended && (
@@ -124,7 +155,14 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
           </div>
         )}
         {phase.simCards.providers.length > 0 && (
-          <Block title="Providers"><Pills items={phase.simCards.providers} /></Block>
+          <Block title="Providers">
+            <div className="flex flex-wrap gap-2">
+              {phase.simCards.providers.map(p => (
+                <span key={p} className="px-2.5 py-1 rounded-full text-xs"
+                  style={{ background: '#F3F4F6', color: 'var(--text-medium)' }}>{p}</span>
+              ))}
+            </div>
+          </Block>
         )}
         {phase.simCards.tips.length > 0 && (
           <Block title="Tips">
@@ -133,6 +171,7 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
         )}
       </div>
     ),
+
     permit: (
       <div className="space-y-5">
         <div className="flex items-center gap-2">
@@ -171,16 +210,19 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
         )}
       </div>
     ),
-    insurance: (
+
+    insurance: phase.healthInsurance ? (
       <p className="text-sm leading-relaxed" style={{ color: 'var(--text-medium)' }}>
         {phase.healthInsurance}
       </p>
-    ),
-    banking: (
+    ) : null,
+
+    banking: phase.banking ? (
       <p className="text-sm leading-relaxed" style={{ color: 'var(--text-medium)' }}>
         {phase.banking}
       </p>
-    ),
+    ) : null,
+
     contacts: (
       <div className="space-y-3">
         {phase.keyContacts.map(c => (
@@ -193,18 +235,33 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
             </a>
           </div>
         ))}
+        {phase.additionalNotes.length > 0 && (
+          <div className="mt-4 p-4 rounded-xl" style={{ background: '#F0FDFA', border: '1px solid #99F6E4' }}>
+            <div className="flex items-center gap-2 mb-3">
+              <Info size={14} style={{ color: 'var(--teal-primary)' }} />
+              <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: 'var(--teal-primary)' }}>
+                Additional Notes
+              </p>
+            </div>
+            <ul className="space-y-2">
+              {phase.additionalNotes.map(n => (
+                <li key={n} className="flex gap-2 text-xs" style={{ color: 'var(--text-medium)' }}>
+                  <span style={{ color: 'var(--teal-primary)', flexShrink: 0 }}>ℹ️</span>{n}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     ),
   };
 
   return (
-    /* Backdrop */
     <div
       className="fixed inset-0 z-50 flex justify-end"
       style={{ background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(3px)' }}
       onClick={onClose}
     >
-      {/* Panel — stops click propagation so clicking inside doesn't close */}
       <div
         className="relative flex flex-col h-full overflow-hidden"
         style={{
@@ -227,7 +284,6 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-          {/* Close button */}
           <button
             onClick={onClose}
             className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center transition-colors hover:bg-white/30"
@@ -236,7 +292,6 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
             <X size={18} />
           </button>
 
-          {/* Phase badge + country */}
           <div className="absolute bottom-4 left-4">
             <span className="inline-block mb-2 px-2.5 py-0.5 rounded-full text-xs font-semibold text-white"
               style={{ background: 'rgba(0,201,184,0.85)' }}>{phase.phase}</span>
@@ -250,7 +305,8 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
         </div>
 
         {/* Info strip */}
-        <div className="flex flex-wrap gap-4 px-5 py-4 shrink-0 border-b" style={{ borderColor: 'var(--border)', background: '#ffffff' }}>
+        <div className="flex flex-wrap gap-4 px-5 py-4 shrink-0 border-b"
+          style={{ borderColor: 'var(--border)', background: '#ffffff' }}>
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: 'var(--text-light)' }}>University</p>
             <p className="text-sm font-semibold" style={{ color: 'var(--text-dark)' }}>
@@ -271,43 +327,27 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
           </div>
         </div>
 
-        {/* Tab bar */}
-        <div className="flex overflow-x-auto gap-1.5 px-5 py-3 shrink-0 border-b" style={{ borderColor: 'var(--border)', scrollbarWidth: 'none', background: '#ffffff' }}>
-          {TABS.map(t => (
-            <button
-              key={t.key}
-              onClick={() => setTab(t.key)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all"
-              style={tab === t.key
-                ? { background: 'var(--teal-primary)', color: 'white' }
-                : { background: '#F3F4F6', color: 'var(--text-medium)' }}>
-              {t.icon}{t.label}
-            </button>
-          ))}
-        </div>
+        {/* Tab bar — only shows tabs configured for this country */}
+        {TABS.length > 1 && (
+          <div className="flex overflow-x-auto gap-1.5 px-5 py-3 shrink-0 border-b"
+            style={{ borderColor: 'var(--border)', scrollbarWidth: 'none', background: '#ffffff' }}>
+            {TABS.map(t => (
+              <button
+                key={t.key}
+                onClick={() => setTab(t.key)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all"
+                style={tab === t.key
+                  ? { background: 'var(--teal-primary)', color: 'white' }
+                  : { background: '#F3F4F6', color: 'var(--text-medium)' }}>
+                {t.icon}{t.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Scrollable content */}
         <div className="flex-1 overflow-y-auto p-5" style={{ background: '#f8f9fa' }}>
-          {tabContent[tab]}
-
-          {/* Additional notes at bottom of contacts tab or always */}
-          {tab === 'contacts' && phase.additionalNotes.length > 0 && (
-            <div className="mt-5 p-4 rounded-xl" style={{ background: '#F0FDFA', border: '1px solid #99F6E4' }}>
-              <div className="flex items-center gap-2 mb-3">
-                <Info size={14} style={{ color: 'var(--teal-primary)' }} />
-                <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: 'var(--teal-primary)' }}>
-                  Additional Notes
-                </p>
-              </div>
-              <ul className="space-y-2">
-                {phase.additionalNotes.map(n => (
-                  <li key={n} className="flex gap-2 text-xs" style={{ color: 'var(--text-medium)' }}>
-                    <span style={{ color: 'var(--teal-primary)', flexShrink: 0 }}>ℹ️</span>{n}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          {tabContent[tab] ?? null}
         </div>
       </div>
 
