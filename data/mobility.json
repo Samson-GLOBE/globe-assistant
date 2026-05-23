@@ -9,7 +9,7 @@
     "university": "Universidad Rey Juan Carlos",
     "universityShort": "URJC",
     "duration": "First Semester",
-    "image": "/images/spain-campus.jpg",
+    "image": "/images/spain-campus.JPG",
     "color": "#E8453C",
     "tabs": ["accommodation", "transport", "permit", "banking"],
     "accommodation": {
@@ -60,7 +60,7 @@
       "notes": "EU citizens: register at the Registro Central de Extranjeros instead (much simpler). Non-EU students must arrive on a long-stay visa obtained from the Spanish embassy BEFORE travelling."
     },
     "healthInsurance": "",
-    "banking": "Open a local Spanish bank such as Santander, BBVA, or another local bank — it will be convenient for many other processes during your mobility. Alternatively, you can open a Wise or Revolut account as a flexible online option.",
+    "banking": "Open a local Spanish bank such as Santander, BBVA, or another local bank  it will be convenient for many other processes during your mobility. Alternatively, you can open a Wise or Revolut account as a flexible online option.",
     "keyContacts": [],
     "additionalNotes": []
   },
@@ -74,7 +74,7 @@
     "university": "Bangor University",
     "universityShort": "Bangor",
     "duration": "Second Semester — Bangor University",
-    "image": "/images/uk-campus.jpg",
+    "image": "/images/uk-campus.JPG",
     "color": "#012169",
     "tabs": ["accommodation"],
     "accommodation": {
@@ -133,7 +133,7 @@
     "university": "Universidade de Lisboa",
     "universityShort": "ULisboa",
     "duration": "Third Semester — Universidade de Lisboa",
-    "image": "/images/portugal-campus.jpg",
+    "image": "/images/portugal-campus.JPG",
     "color": "#006600",
     "tabs": ["accommodation"],
     "accommodation": {
