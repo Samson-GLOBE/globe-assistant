@@ -10,19 +10,32 @@ import type { VisaRequirementsData, CountryCode } from '@/types';
 
 const data = visaData as VisaRequirementsData;
 
-const COUNTRIES: { code: CountryCode; name: string; flag: string; university: string }[] = [
-  { code: 'ES', name: 'Spain',          flag: '🇪🇸', university: 'URJC Madrid' },
-  { code: 'GB', name: 'United Kingdom', flag: '🇬🇧', university: 'Bangor University' },
-  { code: 'MX', name: 'Mexico',         flag: '🇲🇽', university: 'UATx Tlaxcala' },
-  { code: 'PT', name: 'Portugal',       flag: '🇵🇹', university: 'Partner TBD' },
+const COUNTRIES: { code: CountryCode; name: string; university: string }[] = [
+  { code: 'ES', name: 'Spain',          university: 'URJC Madrid' },
+  { code: 'GB', name: 'United Kingdom', university: 'Bangor University' },
+  { code: 'MX', name: 'Mexico',         university: 'UATx Tlaxcala' },
+  { code: 'PT', name: 'Portugal',       university: 'Universidade de Lisboa' },
 ];
 
 const countries = Object.keys(data.nationalities).sort();
 
+// Real flag image — renders correctly on all platforms including Windows
+function FlagImg({ countryCode, size = 28 }: { countryCode: string; size?: number }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={`https://flagcdn.com/w40/${countryCode.toLowerCase()}.png`}
+      alt={countryCode}
+      width={size}
+      height={Math.round(size * 0.67)}
+      style={{ borderRadius: 3, objectFit: 'cover', display: 'inline-block' }}
+    />
+  );
+}
+
 interface ModalInfo {
   code: CountryCode;
   name: string;
-  flag: string;
   university: string;
 }
 
@@ -60,6 +73,17 @@ export default function VisaCheckerPage() {
           <p className="text-white/80">
             Select your country to instantly see what you need for each GLOBE destination.
           </p>
+          {/* Destination country badges with real flag images */}
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-5">
+            {COUNTRIES.map(c => (
+              <div key={c.code}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium"
+                style={{ background: 'rgba(255,255,255,0.12)', border: '1px solid rgba(255,255,255,0.2)', color: '#fff' }}>
+                <FlagImg countryCode={c.code} size={18} />
+                <span>{c.name}</span>
+              </div>
+            ))}
+          </div>
           <p className="text-white/50 text-xs mt-3">
             Last updated: {data.lastUpdated} · Always verify with official sources.
           </p>
@@ -132,14 +156,13 @@ export default function VisaCheckerPage() {
                   passport holders
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {COUNTRIES.map(({ code, name, flag, university }) => (
+                  {COUNTRIES.map(({ code, name, university }) => (
                     <VisaResultCard
                       key={code}
                       countryCode={code}
                       countryName={`${name} — ${university}`}
-                      flag={flag}
                       data={results[code]}
-                      onViewDetails={() => setModal({ code, name, flag, university })}
+                      onViewDetails={() => setModal({ code, name, university })}
                     />
                   ))}
                 </div>
@@ -164,8 +187,8 @@ export default function VisaCheckerPage() {
       {/* Visa details modal */}
       {modal && results && (
         <VisaModal
+          countryCode={modal.code}
           countryName={`${modal.name} — ${modal.university}`}
-          flag={modal.flag}
           university={modal.university}
           passportCountry={selected!}
           data={results[modal.code]}
