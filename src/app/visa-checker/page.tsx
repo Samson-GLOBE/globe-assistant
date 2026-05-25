@@ -14,7 +14,7 @@ const COUNTRIES: { code: CountryCode; name: string; university: string }[] = [
   { code: 'ES', name: 'Spain',          university: 'URJC Madrid' },
   { code: 'GB', name: 'United Kingdom', university: 'Bangor University' },
   { code: 'MX', name: 'Mexico',         university: 'UATx Tlaxcala' },
-  { code: 'PT', name: 'Portugal',       university: 'Universidade de Lisboa' },
+  { code: 'PT', name: 'Portugal',       university: 'Universidad de Lisboa' },
 ];
 
 const countries = Object.keys(data.nationalities).sort();
