@@ -5,12 +5,24 @@ import type { VisaCountryRequirement } from '@/types';
 interface Props {
   countryCode: string;
   countryName: string;
-  flag: string;
   data: VisaCountryRequirement;
   onViewDetails: () => void;
 }
 
-export default function VisaResultCard({ countryName, flag, data, onViewDetails }: Props) {
+function FlagImg({ countryCode, size = 32 }: { countryCode: string; size?: number }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={`https://flagcdn.com/w40/${countryCode.toLowerCase()}.png`}
+      alt={countryCode}
+      width={size}
+      height={Math.round(size * 0.67)}
+      style={{ borderRadius: 3, objectFit: 'cover', display: 'inline-block' }}
+    />
+  );
+}
+
+export default function VisaResultCard({ countryCode, countryName, data, onViewDetails }: Props) {
   const req = data.required;
   const eea = data.visaFreeEEA;
 
@@ -26,8 +38,8 @@ export default function VisaResultCard({ countryName, flag, data, onViewDetails 
       <div className="p-4 flex-1">
         {/* Country header */}
         <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">{flag}</span>
+          <div className="flex items-center gap-2.5">
+            <FlagImg countryCode={countryCode} size={32} />
             <h3 className="text-base font-bold" style={{ fontFamily: 'Poppins,sans-serif', color: '#1A1A2E' }}>
               {countryName}
             </h3>
