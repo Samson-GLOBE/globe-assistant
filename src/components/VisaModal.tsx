@@ -4,15 +4,28 @@ import { X, CheckCircle, XCircle, ExternalLink, FileText, Info, Clock } from 'lu
 import type { VisaCountryRequirement } from '@/types';
 
 interface Props {
+  countryCode: string;
   countryName: string;
-  flag: string;
   university: string;
   passportCountry: string;
   data: VisaCountryRequirement;
   onClose: () => void;
 }
 
-export default function VisaModal({ countryName, flag, university, passportCountry, data, onClose }: Props) {
+function FlagImg({ countryCode, size = 40 }: { countryCode: string; size?: number }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={`https://flagcdn.com/w80/${countryCode.toLowerCase()}.png`}
+      alt={countryCode}
+      width={size}
+      height={Math.round(size * 0.67)}
+      style={{ borderRadius: 4, objectFit: 'cover', boxShadow: '0 1px 4px rgba(0,0,0,0.15)' }}
+    />
+  );
+}
+
+export default function VisaModal({ countryCode, countryName, university, passportCountry, data, onClose }: Props) {
   const req = data.required;
   const eea = data.visaFreeEEA;
 
@@ -46,8 +59,8 @@ export default function VisaModal({ countryName, flag, university, passportCount
         {/* Header */}
         <div className="flex items-start justify-between p-5 border-b" style={{ borderColor: '#E5E7EB', background: '#ffffff' }}>
           <div className="flex-1 min-w-0 pr-3">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-2xl">{flag}</span>
+            <div className="flex items-center gap-3 mb-1">
+              <FlagImg countryCode={countryCode} size={38} />
               <h2 className="text-xl font-bold truncate" style={{ fontFamily: 'Poppins,sans-serif', color: '#1A1A2E' }}>
                 {countryName}
               </h2>
