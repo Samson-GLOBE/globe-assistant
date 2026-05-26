@@ -135,6 +135,11 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
             </ul>
           </Block>
         )}
+        {phase.transport.platforms && phase.transport.platforms.length > 0 && (
+          <Block title="Booking Platforms">
+            <Platforms items={phase.transport.platforms} />
+          </Block>
+        )}
         {phase.transport.tips.length > 0 && (
           <Block title="Tips">
             <ul className="space-y-2">{phase.transport.tips.map(t => <Tip key={t} text={t} />)}</ul>
