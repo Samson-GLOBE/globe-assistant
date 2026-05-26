@@ -13,6 +13,7 @@ export interface AccommodationInfo {
 export interface TransportInfo {
   description: string;
   options: string[];
+  platforms?: PlatformLink[];
   tips: string[];
 }
 
