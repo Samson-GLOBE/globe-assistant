@@ -218,9 +218,8 @@ export default function MobilityModal({ phase, onClose }: { phase: MobilityPhase
     ) : null,
 
     banking: phase.banking ? (
-      <p className="text-sm leading-relaxed" style={{ color: 'var(--text-medium)' }}>
-        {phase.banking}
-      </p>
+      <p className="text-sm leading-relaxed" style={{ color: 'var(--text-medium)' }}
+        dangerouslySetInnerHTML={{ __html: phase.banking }} />
     ) : null,
 
     contacts: (
