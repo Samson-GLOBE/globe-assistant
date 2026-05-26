@@ -1,0 +1,159 @@
+[
+  {
+    "id": "spain",
+    "phase": "Semester 1",
+    "country": "Spain",
+    "countryCode": "ES",
+    "flag": "🇪🇸",
+    "city": "Madrid",
+    "university": "Universidad Rey Juan Carlos",
+    "universityShort": "URJC",
+    "duration": "First Semester",
+    "image": "/images/spain-campus.jpg",
+    "color": "#E8453C",
+    "tabs": ["accommodation", "transport", "permit", "banking"],
+    "accommodation": {
+      "description": "Estimated budget: €400–700 per month.",
+      "budget": "€400–700/month",
+      "platforms": [
+        { "name": "Idealista", "url": "https://www.idealista.com" },
+        { "name": "Spotahome", "url": "https://www.spotahome.com" },
+        { "name": "Fotocasa", "url": "https://www.fotocasa.es" }
+      ],
+      "tips": [
+        "Ask for a rental contract or agreement and sign it duly.",
+        "Check the place's address. Even if not possible in person, do a video call to check so that you don't fall for a scam."
+      ]
+    },
+    "transport": {
+      "description": "Madrid has one of Europe's best public transport networks covering metro, bus, and commuter rail. To use it you need a Tarjeta de Transporte Público (TTP) — a rechargeable card issued by CRTM. Book your card appointment in advance at www.crtm.es before arriving. Monthly recharge: €10/month for under-25s (Abono Joven) or €49/month for ages 26 and older (full Madrid Community area). One-time card issuance fee: €4. Required documents: valid passport + €4 in cash.",
+      "options": [
+        "By Train — Móstoles–El Soto station · C-5 Renfe Cercanías (Commuter Rail)",
+        "By Metro — Universidad Rey Juan Carlos station · Line L-12",
+        "By Bus — Blas & CIA: Lines 522, 523, 525, 526 and 529H"
+      ],
+      "tips": [
+        "Book your TTP card appointment in advance at crtm.es — walk-ins are not always available.",
+        "Under 25? Abono Joven costs €10/month for unlimited Metro, Bus & Cercanías across Madrid.",
+        "Age 26 or older? Standard Abono Transporte covers the full Madrid Community for €49/month.",
+        "Bring your passport and €4 cash to your appointment for the card issuance fee.",
+        "Download the METRO MADRID and CERCANÍAS apps for real-time maps and timetables.",
+        "Taxi apps: Cabify and FREE NOW are safer than flagging street taxis."
+      ]
+    },
+    "simCards": { "providers": [], "recommended": "", "tips": [] },
+    "residencePermit": {
+      "required": true,
+      "name": "TIE — Tarjeta de Identidad de Extranjero",
+      "timeline": "Apply within 30 days of arrival at the Oficina de Extranjería",
+      "documents": [
+        "Valid passport + photocopy of all pages",
+        "Long-stay (Type D) student visa",
+        "3 recent passport-size photos (35×45mm, white background)",
+        "University enrollment certificate (Carta de Admisión from URJC)",
+        "Empadronamiento (municipal registration certificate from the City Hall / Ayuntamiento)",
+        "Proof of health insurance",
+        "Proof of financial means (Erasmus grant letter or bank statements)",
+        "Completed EX-17 application form",
+        "Appointment booked at extranjeria.gob.es (cita previa)"
+      ],
+      "notes": "EU citizens: register at the Registro Central de Extranjeros instead (much simpler). Non-EU students must arrive on a long-stay visa obtained from the Spanish embassy BEFORE travelling."
+    },
+    "healthInsurance": "",
+    "banking": "Open a local Spanish bank such as Santander, BBVA, or another local bank — it will be convenient for many other processes during your mobility. Alternatively, you can open a <img src=\"https://wise.com/favicon.ico\" width=\"14\" height=\"14\" style=\"display:inline;vertical-align:middle;margin-right:3px;border-radius:2px\" /><a href=\"https://wise.com/invite/irhc/imtiazahmeds10\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:#00C9B8;font-weight:700\">Wise</a> or <img src=\"https://assets.revolut.com/favicon.ico\" width=\"14\" height=\"14\" style=\"display:inline;vertical-align:middle;margin-right:3px;border-radius:2px\" /><a href=\"https://revolut.com/referral/?referral-code=smikaelsolomon!MAY2-26-VR-ES&amp;geo-redirect\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color:#00C9B8;font-weight:700\">Revolut</a> account as a flexible online option.",
+    "keyContacts": [],
+    "additionalNotes": []
+  },
+  {
+    "id": "uk",
+    "phase": "Semester 2",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "flag": "🇬🇧",
+    "city": "Bangor, Wales",
+    "university": "Bangor University",
+    "universityShort": "Bangor",
+    "duration": "Second Semester — Bangor University",
+    "image": "/images/uk-campus.jpg",
+    "color": "#012169",
+    "tabs": ["accommodation"],
+    "accommodation": {
+      "description": "Estimated budget: £400–800 per month, including utility bills.",
+      "budget": "£400–800/month (utilities included)",
+      "platforms": [
+        { "name": "Bangor University Accommodation", "url": "https://www.bangor.ac.uk/student-services/accommodation" },
+        { "name": "SpareRoom", "url": "https://www.spareroom.co.uk" },
+        { "name": "Rightmove", "url": "https://www.rightmove.co.uk" },
+        { "name": "Zoopla", "url": "https://www.zoopla.co.uk" }
+      ],
+      "tips": []
+    },
+    "transport": { "description": "", "options": [], "tips": [] },
+    "simCards": { "providers": [], "recommended": "", "tips": [] },
+    "residencePermit": { "required": false, "name": "", "timeline": "", "documents": [], "notes": "" },
+    "healthInsurance": "",
+    "banking": "",
+    "keyContacts": [],
+    "additionalNotes": []
+  },
+  {
+    "id": "mexico",
+    "phase": "Summer School",
+    "country": "Mexico",
+    "countryCode": "MX",
+    "flag": "🇲🇽",
+    "city": "Tlaxcala",
+    "university": "Universidad Autónoma de Tlaxcala",
+    "universityShort": "UATx",
+    "duration": "Third Semester — Summer School, University of Tlaxcala",
+    "image": "/images/mexico-campus.jpg",
+    "color": "#006847",
+    "tabs": ["accommodation"],
+    "accommodation": {
+      "description": "Accommodation and transport from the airport to your place of stay will be arranged and fully taken care of by the Universidad Autónoma de Tlaxcala (UATx). No further action is required from students — everything will be organised by the university.",
+      "budget": "",
+      "platforms": [],
+      "tips": []
+    },
+    "transport": { "description": "", "options": [], "tips": [] },
+    "simCards": { "providers": [], "recommended": "", "tips": [] },
+    "residencePermit": { "required": false, "name": "", "timeline": "", "documents": [], "notes": "" },
+    "healthInsurance": "",
+    "banking": "",
+    "keyContacts": [],
+    "additionalNotes": []
+  },
+  {
+    "id": "portugal",
+    "phase": "Semester 3",
+    "country": "Portugal",
+    "countryCode": "PT",
+    "flag": "🇵🇹",
+    "city": "Lisbon",
+    "university": "Universidade de Lisboa",
+    "universityShort": "ULisboa",
+    "duration": "Third Semester — Universidade de Lisboa",
+    "image": "/images/portugal-campus.jpg",
+    "color": "#006600",
+    "tabs": ["accommodation"],
+    "accommodation": {
+      "description": "Estimated budget: €500–800 per month (prices are higher in Lisbon).",
+      "budget": "€500–800/month",
+      "platforms": [
+        { "name": "Uniplaces", "url": "https://www.uniplaces.com" },
+        { "name": "Idealista PT", "url": "https://www.idealista.pt" },
+        { "name": "OLX Portugal", "url": "https://www.olx.pt" },
+        { "name": "Imovirtual", "url": "https://www.imovirtual.com" },
+        { "name": "ULisboa Housing Portal", "url": "https://www.ulisboa.pt/en/servicos/residential-services" }
+      ],
+      "tips": []
+    },
+    "transport": { "description": "", "options": [], "tips": [] },
+    "simCards": { "providers": [], "recommended": "", "tips": [] },
+    "residencePermit": { "required": false, "name": "", "timeline": "", "documents": [], "notes": "" },
+    "healthInsurance": "",
+    "banking": "",
+    "keyContacts": [],
+    "additionalNotes": []
+  }
+]
