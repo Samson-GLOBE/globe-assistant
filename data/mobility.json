@@ -30,7 +30,7 @@
       "options": [
         "By Train — Móstoles–El Soto station · C-5 Renfe Cercanías (Commuter Rail)",
         "By Metro — Universidad Rey Juan Carlos station · Line L-12",
-        "By Bus — Blas & CIA: Lines 522, 523, 525, 526 and 529H"
+        "By Bus — Lines 522, 523, 525, 526 and 529H"
       ],
       "platforms": [],
       "tips": [
@@ -43,10 +43,10 @@
       ]
     },
     "simCards": {
-      "providers": ["Vodafone", "Orange", "Digi", "Libra"],
+      "providers": ["Vodafone", "Movistar", "Orange", "Digi", "Lebara"],
       "recommended": "",
       "tips": [
-        "Buying a SIM card at the airport can be more expensive — wait until you arrive at the city centre for better deals.",
+        "Buying a SIM card at the airport can be more expensive  wait until you arrive at the city centre for better deals.",
         "A new SIM card typically costs around €10 for the first purchase.",
         "You will need your passport with you when purchasing a SIM card."
       ]
