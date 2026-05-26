@@ -50,7 +50,7 @@
         "Long-stay (Type D) student visa",
         "3 recent passport-size photos (35×45mm, white background)",
         "University enrollment certificate (Carta de Admisión from URJC)",
-        "Empadronamiento (municipal registration certificate from the City Hall / Ayuntamiento)",
+        "Empadronamiento (municipal registration certificate from the City Hall / Ayuntamiento)/Optional but recommended",
         "Proof of health insurance",
         "Proof of financial means (Erasmus grant letter or bank statements)",
         "Completed EX-17 application form",
@@ -59,7 +59,7 @@
       "notes": "EU citizens: register at the Registro Central de Extranjeros instead (much simpler). Non-EU students must arrive on a long-stay visa obtained from the Spanish embassy BEFORE travelling."
     },
     "healthInsurance": "",
-    "banking": "Open a local Spanish bank such as Santander, BBVA, or another local bank — it will be convenient for many other processes during your mobility. Alternatively, you can open a Wise or Revolut account as a flexible online option.",
+    "banking": "Open a local Spanish bank such as Santander, BBVA, or another local bank  it will be convenient for many other processes during your mobility. Alternatively, you can open a **Wise** (https://wise.com/invite/irhc/imtiazahmeds10) or **Revolut** (https://revolut.com/referral/?referral-code=smikaelsolomon!MAY2-26-VR-ES&geo-redirect) account as a flexible online option."
     "keyContacts": [],
     "additionalNotes": []
   },
