@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import { getSupabase } from '@/lib/supabase';
+
+// Force dynamic so Next.js never tries to statically render this route at build time
+export const dynamic = 'force-dynamic';
 
 // GET /api/feedback — fetch all approved submissions, newest first
 export async function GET() {
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('feedback')
     .select('id, created_at, name, cohort_year, destination, category, content')
     .eq('approved', true)
@@ -42,7 +45,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const { error } = await supabase.from('feedback').insert([
+  const { error } = await getSupabase().from('feedback').insert([
     {
       name: name?.trim() || null,
       cohort_year: cohort_year?.trim() || null,
