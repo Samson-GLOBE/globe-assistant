@@ -5,9 +5,10 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 const links = [
-  { href: '/', label: 'Mobility' },
+  { href: '/',             label: 'Mobility'     },
   { href: '/visa-checker', label: 'Visa Checker' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/feedback',     label: 'Experiences'  },
+  { href: '/contact',      label: 'Contact'      },
 ];
 
 export default function Navbar() {
