@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import { getSupabase } from '@/lib/supabase';
+
+// Force dynamic so Next.js never tries to statically render this route at build time
+export const dynamic = 'force-dynamic';
 
 // GET /api/keep-alive
 // Called every 3 days by Vercel Cron to prevent Supabase free-tier pausing.
@@ -12,7 +15,7 @@ export async function GET(request: NextRequest) {
   }
 
   // Lightweight query — just proves the DB is reachable
-  const { error } = await supabase
+  const { error } = await getSupabase()
     .from('feedback')
     .select('id')
     .limit(1);
